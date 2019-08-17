@@ -8,7 +8,7 @@ sorted_s1 = []
 def show(f):
     global sorted_s1
     global stu_dict
-    sorted_s1 = sorted(stu_dict.items(),key=lambda a: a[1][2], reverse=True)
+    sorted_s1 = sorted(stu_dict.items(),key=lambda a: a[1][3], reverse=True)
     print(' Student','\t\tName','\tMidterm','   Final','  Average', '  Grade')
     print('--------------------------------------------------------------------')
 
@@ -195,7 +195,7 @@ def main():
         line1.append(average)
         line1.append(grade)
         stu_dict[int(line1[0])] = [line1[1],int(line1[2]), int(line1[3]), line1[4], line1[5]]
-        sorted_s1 = sorted(stu_dict.items(),key=lambda a: a[1][2], reverse=True)
+        sorted_s1 = sorted(stu_dict.items(),key=lambda a: a[1][3], reverse=True)
 
 
     for k,v in sorted_s1:
