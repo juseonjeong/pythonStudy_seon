@@ -155,7 +155,7 @@ def remove(f):
             print("Student removed.")
         
 #7.quit
-def quit():
+def quit(f):
     global sorted_s1
     save = input("Save data?[yes/no]")
     if save == 'yes':
@@ -164,6 +164,7 @@ def quit():
         for i in sorted_s1:
             f2.write('{0}\t{1}\t{2}\t{3}\t{4}\t{5}\n'.format(i[0],i[1][0],i[1][1],i[1][2],i[1][3],i[1][4]))
         f2.close()
+        f.close()
         
 #main
 def main():
@@ -217,7 +218,7 @@ def main():
         elif command.lower() == 'remove':
             remove(f)
         elif command.lower() == 'quit':
-            quit()
+            quit(f)
             print('$')
             break
 
